@@ -1,9 +1,7 @@
-FROM php:apache
+FROM debian:latest
 
-COPY . /usr/src/tinyfilemanager
+RUN apt-get update && apt-get install -y apache2
 
-WORKDIR /usr/src/tinyfilemanager
+ADD index.php /var/www/html
 
-EXPOSE 8000
-
-#CMD [ "php", "./tinyfilemanager.php" ]
+CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
