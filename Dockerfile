@@ -11,6 +11,6 @@ COPY entrypoint.sh /etc/entrypoint.sh
 
 #WORKDIR /var/www/www-data
 
-EXPOSE 80
+EXPOSE 8000
 
 ENTRYPOINT ["/etc/entrypoint.sh"]
