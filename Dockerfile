@@ -1,9 +1,9 @@
-FROM php:7.4-cli
+FROM php:apache
 
 COPY . /usr/src/tinyfilemanager
 
 WORKDIR /usr/src/tinyfilemanager
 
-EXPOSE 80
+EXPOSE 8000
 
-CMD [ "php", "./tinyfilemanager.php" ]
+#CMD [ "php", "./tinyfilemanager.php" ]
